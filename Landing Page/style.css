@@ -1,0 +1,27 @@
+body{
+    background: #E9DCC3;
+}
+#header {}
+
+#header-img {
+    position: absolute;
+}
+
+#nav-bar {
+    /* position:static; */
+    width:70%;
+    display: flex;
+    margin:auto 0 0 30% ;
+    background-color: white;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+}
+
+.nav-links {
+    width: 33%;
+    height: 33%;
+    color: black;
+    display: flex;
+    justify-content: center;
+}
