@@ -9,10 +9,11 @@
 body {
   background: -moz-linear-gradient(left, white, #5fa0c6);
   background: -webkit-linear-gradient(left, white, #5fa0c6);
-  font-family:"Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
   font-size: 1rem;
 }
-main{
+
+main {
   text-align: center;
   margin: 10px auto;
 }
@@ -25,6 +26,7 @@ main{
   padding: 30px 20px;
   background: #eee;
   border-radius: 5px;
+  box-shadow: 0px 0px 1rem 0px;
 }
 
 
@@ -50,9 +52,10 @@ main{
   font-weight: 400;
   background-color: #37AF65;
 }
-.form-container select{
+
+.form-container select {
   width: 100%;
-  margin:.75rem auto .75rem auto;
+  margin: .75rem auto .75rem auto;
   height: 2.5rem;
   padding: 0.4rem 0.75rem;
   background-color: #fff;
@@ -60,17 +63,19 @@ main{
   border: 1px solid #ced4da;
   border-radius: 0.25rem;
 }
-.stative-p{
+
+.stative-p {
   font-weight: 500;
   //text-align: center;
-  margin:.25rem auto .25rem auto;
+  margin: .25rem auto .25rem auto;
   display: block;
 }
-.form-group1{
+
+.form-group1 {
   display: block;
   margin-bottom: 5px;
 }
-.form-group1 textarea{
+
+.form-group1 textarea {
   width: 100%;
 }
-
