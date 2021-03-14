@@ -1,25 +1,126 @@
 <!DOCTYPE html>
-<html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FCC Landing Page</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style.css" type="text/css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
     <header id="header">
         <nav id="nav-bar">
-                <a id="nav-link" href="https://www.example.com/">Guides</a>
-                <a id="nav-link" href="https://www.example.com/">Downloads</a>
-                <a id="nav-link" href="https://www.example.com/">Pricing</a>
-                <img src="logo.svg" alt="Logo Maker Alpha" id="header-img">
+            <a id="nav-link" href="#features">Features</a>
+            <a id="nav-link" href="#downloads">Downloads</a>
+            <a id="nav-link" href="#pricing">Pricing</a>
+            <a id="header-img" href="#">
+                <img src="./images/logo.svg" alt="Logo Maker Alpha">
+            </a>
         </nav>
-
     </header>
     <main>
+        <iframe id="video" class="video" src="https://www.youtube.com/embed/BrEazMe3z1Y">
+        </iframe>
+        <h2 id="features" class="header2">Your digital Instruments, Simplified.</h2>
+        <p class="header2">Tab Maker Alpha is a tool designed to help you create properly formatted tabs for your
+            guitar, piano, bass or midi player.</p>
+        <div class="container-grid0">
+            <i class="small-icon material-icons">style</i>
+            <p class="small-p">Simple and Elegent Graphical Interface</p>
+            <i class="small-icon material-icons">sync</i>
+            <p class="small-p">Easlly Covert Tabs to Midi and vise-versa </p>
+            <i class="small-icon material-icons">notes</i>
+            <p class="small-p">Export Created Tabs to PDF</p>
+        </div>
+        <h2 id="downloads" class="header2">Download Alpha now!</h2>
+        <div class="container-grid1">
+            <div id="linux-sub" class="download-tabs">
+                <div class="img-wrap">
+                    <div id="linux-img"></div>
+                </div>
+                <div class="content-wrap">
+                    <h2 class="orange-text">Linux</h2>
+                    <p>Requirements: Tested on CentOS 7, Fedora 28 and Ubuntu 16.04 or later (64-bit only)</p>
+                </div>
+                <div class="badge-wrap">
+                    <a href="https://example.com/" target="plank"><img src="./images/linux_badge@1x.png" alt=""></a>
+                    <p class="orange-text">version 1.2.0</p>
+                </div>
+            </div>
+            <div id="mac-sub" class="download-tabs">
+                <div class="img-wrap">
+                    <div id="mac-img"></div>
+                </div>
+                <div class="content-wrap">
+                    <h2 class="orange-text">macOS</h2>
+                    <p>Requirements:macOS 10.12 or later</p>
+                </div>
+                <div class="badge-wrap">
+                    <a href="https://example.com/" target="plank"><img src="images/mac_app_store@1x.png" alt=""></a>
+                    <p class="orange-text">version 1.2.0</p>
+                </div>
+            </div>
+            <div id="win-sub" class="download-tabs">
+                <div class="img-wrap">
+                    <div id="win-img"></div>
+                </div>
+                <div class="content-wrap">
+                    <h2 class="orange-text">Windows 10</h2>
+                    <p>Requirements: Windows 10</p>
+                </div>
+                <div class="badge-wrap">
+                    <a href="https://example.com/" target="plank"><img src="images/windows_badge.png" alt=""></a>
+                    <p class="orange-text">version 1.2.0</p>
+                </div>
+            </div>
+        </div>
+        <hr style="max-width: 60%; margin: auto;">
+        <div id="pricing" class="prices">
+            <div class="price-card">
+                <div class="price-header orange-text">Personal</div>
+                <h3 class="header3">Free!</h3>
+                <div class="temp">
+                    <ul class="feature-list">
+                        <li>Tab Maker</li>
+                        <li>Tabs To Midi</li>
+                        <li>Tab to PDF</li>
 
+                    </ul>
+                    <span><button class="btn">Select</button></span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header orange-text">Commercial</div>
+                <h3 class="header3">10$/year</h3>
+                <div class="temp">
+                    <ul class="feature-list">
+                        <li>Tab Maker</li>
+                        <li>Tabs To Midi</li>
+                        <li>Tab to PDF</li>
+                        <li>Customer support</li>
+                    </ul>
+                    <span><button class="btn">Select</button></span>
+                </div>
+            </div>
+            <div class="price-card">
+                <div class="price-header orange-text">Commercial</div>
+                <h3 class="header3">100$ For a life time license</h3>
+                <div class="temp">
+                    <ul class="feature-list">
+                        <li>Tab Maker</li>
+                        <li>Tabs To Midi</li>
+                        <li>Tab to PDF</li>
+                        <li>Customer support</li>
+                        <li>Buy once, own forever.</li>
+                        
+                    </ul>
+                    <span><button class="btn">Select</button></span>
+                </div>
+               
+            </div>
+
+        </div>
     </main>
 </body>
