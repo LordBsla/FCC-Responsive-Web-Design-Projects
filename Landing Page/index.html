@@ -5,18 +5,20 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FCC Landing Page</title>
+    <link rel="shortcut icon" href="./images/logo.png" type="image/x-icon">
     <link rel="stylesheet" href="./style.css" type="text/css">
+    <!-- <script src="site.js"></script> -->
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 </head>
 
 <body>
     <header id="header">
         <nav id="nav-bar">
-            <a id="nav-link" href="#features">Features</a>
-            <a id="nav-link" href="#downloads">Downloads</a>
-            <a id="nav-link" href="#pricing">Pricing</a>
+            <a class="nav-link" href="#features">Features</a>
+            <a class="nav-link" href="#downloads">Downloads</a>
+            <a class="nav-link" href="#pricing">Pricing</a>
             <a id="header-img" href="#">
-                <img src="./images/logo.svg" alt="Logo Maker Alpha">
+                <img id="" src="./images/logo.svg" alt="Logo Maker Alpha">
             </a>
         </nav>
     </header>
@@ -55,7 +57,7 @@
                 </div>
                 <div class="content-wrap">
                     <h2 class="orange-text">macOS</h2>
-                    <p>Requirements:macOS 10.12 or later</p>
+                    <p>Requirements: macOS 10.12 or later</p>
                 </div>
                 <div class="badge-wrap">
                     <a href="https://example.com/" target="plank"><img src="images/mac_app_store@1x.png" alt=""></a>
@@ -76,8 +78,8 @@
                 </div>
             </div>
         </div>
-        <hr style="max-width: 60%; margin: auto;">
-        <div id="pricing" class="prices">
+        <hr id="pricing" style="max-width: 60%; margin: auto;">
+        <div class="prices">
             <div class="price-card">
                 <div class="price-header orange-text">Personal</div>
                 <h3 class="header3">Free!</h3>
@@ -86,10 +88,9 @@
                         <li>Tab Maker</li>
                         <li>Tabs To Midi</li>
                         <li>Tab to PDF</li>
-
                     </ul>
-                    <span><button class="btn">Select</button></span>
                 </div>
+                <span><button class="btn">Select</button></span>
             </div>
             <div class="price-card">
                 <div class="price-header orange-text">Commercial</div>
@@ -101,8 +102,9 @@
                         <li>Tab to PDF</li>
                         <li>Customer support</li>
                     </ul>
-                    <span><button class="btn">Select</button></span>
+
                 </div>
+                <span><button class="btn">Select</button></span>
             </div>
             <div class="price-card">
                 <div class="price-header orange-text">Commercial</div>
@@ -114,13 +116,18 @@
                         <li>Tab to PDF</li>
                         <li>Customer support</li>
                         <li>Buy once, own forever.</li>
-                        
                     </ul>
-                    <span><button class="btn">Select</button></span>
                 </div>
-               
+                <span><button class="btn">Select</button></span>
             </div>
-
         </div>
+        <section class="news-letter">
+            <h2>Get our latest offers!</h2>
+            <form id="form" action="https://www.freecodecamp.com/email-submit">
+                <input name="email" id="email" type="email" placeholder="Enter your email address" required="">
+                <input id="submit" type="submit" value="Get Started" class="btn">
+            </form>
+        </section>
+        <footer class="footer"><a href="https://github.com/LordBsla" target="plank">GitHub</a></footer>
     </main>
 </body>
