@@ -1,0 +1,77 @@
+@font-face{
+    font-family: "font1";
+    src:url(/Fonts/Roboto-Regular.ttf);
+    src: url(/Fonts/Ubuntu-Regular.ttf);
+}
+@font-face{
+    font-family: "font2";
+    src: url(/Fonts/Ubuntu-Regular.ttf);
+    src: url(/Fonts/Roboto-Regular.ttf);
+}
+h2, h3{
+    font-family: font1;
+}
+p{
+    font-family: font2;
+    line-height: 1.5rem;
+    font-weight: normal;
+    padding: 10px;
+}
+
+code{
+    display: block;
+    font-weight: bold;
+    
+}
+main{
+    background-color: #fff;
+}
+.nav-bar{
+    display: none;
+}
+.side-bar{
+    display: none;
+}
+.main-section{
+    /* background-color: #F1F1F1; */
+    /* background-color: #282C34;
+    color:rgb(212, 229, 250); */
+    padding: 5px 15px;
+    /* width: 90%; */
+    margin-top: 10px;
+}
+.main-section a{
+    display: block;
+}
+.inline-code{
+    display: inline;
+}
+.inline-code p {
+    margin: 0px !important;
+}
+.content-wrapper0{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 20%;
+    width: 80%;
+    background-color: #F1F1F1;
+    padding: 10px;
+}
+.sub-wrapper0{
+    margin: 10px;
+}
+.sub-wrapper0 code{
+    margin: 0 0 -15px 0;
+}
+
+.content-wrapper1{
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 0 20%;
+    width: 80%;
+    background-color: #fff;
+}
+table, th, td {
+    border: 1px solid black;
+  }
+
