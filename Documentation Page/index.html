@@ -7,27 +7,76 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conky Docs</title>
     <link rel="stylesheet" href="./style.css">
-    <link rel="shortcut icon" href="./images/conky-manager-icon.png" type="image/x-icon">
+    <link rel="shortcut icon" href="./images/Concky-logo.jpg" type="image/x-icon">
 </head>
 
 <body>
+    <nav id="navbar">
+        <header>
+            <a href="#"><img src="./images/st,small,507x507-pad,600x600,f8f8f8.jpg" alt=""></a>
+            <h3>Table of contents:</h3>
+        </header>
+        <ul>
+            <li>
+                <a href="#Getting_started">
+                    <h4>Getting Started:</h4>
+                </a>
+            </li>
+
+            <li>
+                <a href="#Options">
+                    <p>Options</p>
+                </a>
+            </li>
+
+            <li>
+                <a href="#Configuration_and_Setup" class="temp">
+                    <h4>Configuration and Setup:</h4>
+                </a>
+            </li>
+            <li>
+                <a href="#Configuration_Settings">
+                    <p>Configuration Settings</p>
+                </a>
+            </li>
+            <li>
+                <a href="#Objects/Variables">
+                    <p>Objects/Variables</p>
+                </a>
+            </li>
+            <li><a href="#Mascellaneous">
+                    <h4>Mascellaneous:</h4>
+                </a>
+            </li>
+            <li>
+                <a href="#Lua_API">
+                    <p>Lua_API</p>
+                </a>
+            </li>
+            <li>
+                <a href="#Examples">
+                    <p>Examples</p>
+                </a>
+            </li>
+        </ul>
+    </nav>
     <main id="main-doc">
         <section class="content-wrapper0">
-            <section class="main-section">
+            <section class="section-wrapper">
                 <h2 id="Getting_started">Getting started</h2>
                 <p>Man page for Conky-Framework</p>
             </section>
-            <section class="main-section">
+            <section class="section-wrapper">
                 <h3 id="name">Name</h3>
                 <p>conky — A system monitor for X originally based on the torsmo code, but more kickass. It just keeps
                     on
                     given'er. Yeah.</p>
             </section>
-            <section class="main-section">
+            <section class="section-wrapper">
                 <h3>Syndopsis</h3>
                 <p>conky [ options ]</p>
             </section>
-            <section class="main-section">
+            <section class="section-wrapper">
                 <h3 id="Description">Description</h3>
                 <p>Conky is a system monitor for X originally based on torsmo. Since its inception, Conky has changed
                     significantly from its predecessor, while maintaining simplicity and configurability. Conky can
@@ -49,7 +98,7 @@
                     #conky on irc.freenode.net if you have questions or want to contribute.
                     Thanks for your interest in Conky. </p>
             </section>
-            <section class="main-section">
+            <section class="section-wrapper">
                 <h3 id="Compiling">Compiling</h3>
                 <p>For users compiling from source on a binary distro, make sure you have the X development libraries
                     installed (Unless you provide configure with "--disable-x11"). This should be a package along the
@@ -83,14 +132,14 @@
                 <p>Conky has been tested to be compatible with C99 C, however it has not been tested with anything other
                     than gcc, and is not guaranteed to work with other compilers. </p>
             </section>
-            <section class="main-section">
+            <section class="section-wrapper">
                 <h3 id="You_Should_Know">You Should Know</h3>
                 <p>Conky is generally very good on resources. That said, the more you try to make Conky do, the more
                     resources it is going to consume.
                     An easy way to force Conky to reload your ~/.conkyrc: "killall -SIGUSR1 conky". Saves you the
                     trouble of having to kill and then restart. You can now also do the same with SIGHUP. </p>
             </section>
-            <section class="main-section">
+            <section class="section-wrapper">
                 <h3 id="Options">Options</h3>
                 <p>Command line options override configurations defined in configuration file.</p>
                 <section class="sub-wrapper0">
@@ -173,10 +222,10 @@
             </section>
         </section>
         <section class="content-wrapper1">
-            <section class="main-section">
+            <section class="section-wrapper">
                 <h2 id="Configuration_and_Setup">Configuration and Setup</h2>
             </section>
-            <section class="main-section">
+            <section class="section-wrapper">
                 <h3 id="Configuration_Settings">Configuration Settings</h3>
                 <p>Default configuration file location is $HOME/.conkyrc or ${sysconfdir}/conky/conky.conf. On most
                     systems, sysconfdir is /etc, and you can find the sample config file there (/etc/conky/conky.conf).
@@ -475,7 +524,12 @@
                     </p>
                 </section>
                 <section class="sub-wrapper0">
-                    <code> own_window_hints undecorated,below,above,sticky,skip_taskbar,skip_pager</code>
+                    <code class="b-code"> own_window_hints </code>
+                    <code class="b-code">
+                        undecorated,below,above,
+                    </code>
+                    <code class="b-code">sticky,skip_taskbar</code>
+                    <code class="b-code">,skip_pager</code>
                     <p>If own_window is yes, you may use these window manager hints to affect the way Conky displays.
                         Notes: Use own_window_type desktop as another way to implement many of these hints implicitly.
                         If you use own_window_type override, window manager hints have no meaning and are ignored. </p>
@@ -609,7 +663,7 @@
                     <p>Xft font to use.</p>
                 </section>
             </section>
-            <section class="main-section">
+            <section class="section-wrapper">
                 <h3 id="Objects/Variables">Objects/Variables</h3>
                 <p>Colours are parsed using XParsecolor(), there might be a list of them: /usr/share/X11/rgb.txt. Colour
                     can be also in #rrggbb format (hex). </p>
@@ -2110,7 +2164,7 @@
                     <p>The following list shows sample usage of the templates defined above, with the equivalent syntax
                         when not using any template at all:</p>
                     <strong>Table 1. </strong>
-                    <table style="width: 90%;margin: 10px auto;">
+                    <table>
                         <tr>
                             <th>using template</th>
                             <th>same without template</th>
@@ -2291,7 +2345,7 @@
                     <code> weather URI locID data_type (interval_in_minutes) </code>
                     <p>Download, parse and display METAR data.</p>
                     <p>For the 'URI', there are two possibilities:</p>
-                    <p> http://weather.noaa.gov/pub/data/observations/metar/stations/</p>
+                    <p>http://weather.noaa.gov/pub/data/observations/metar/stations/</p>
                     <p> http://xoap.weather.com/weather/local/</p>
                     <p>The first one is free to use but the second requires you to register and obtain your partner ID
                         and license key. These two must be written, separated by a space, into a file called .xoaprc
@@ -2507,10 +2561,10 @@
             </section>
         </section>
         <section class="content-wrapper0">
-            <section class="main-section">
+            <section class="section-wrapper">
                 <h2 id="Mascellaneous">Mascellaneous</h2>
             </section>
-            <section  class="main-section">
+            <section class="section-wrapper">
                 <h3 id="Lua_API">Lua API</h3>
                 <p>Conky features a Lua Programming API, and also ships with Lua bindings for some useful libraries.
                     Conky defines certain global functions and variables which can be accessed from Lua code running in
@@ -2530,77 +2584,71 @@
                 <p> This function takes a string that is evaluated as per Conky's TEXT section, and then returns a
                     string with the result. </p>
             </section>
-            
+
             <section class="sub-wrapper0">
-            <code> conky_set_update_interval(number) function </code>
-            <p> Sets Conky's update interval (in seconds) to 'number'. </p>
+                <code> conky_set_update_interval(number) function </code>
+                <p> Sets Conky's update interval (in seconds) to 'number'. </p>
             </section>
-            
+
             <section class="sub-wrapper0">
-            <code> conky_window table </code>
-            <p>This table contains some information about Conky's window. The following table describes the values
-                contained: </p>
+                <code> conky_window table </code>
+                <p>This table contains some information about Conky's window. The following table describes the values
+                    contained: </p>
             </section>
-            <section>
+            <section class="sub-wrapper0">
                 <code class="inline-code">drawable</code>
-                <p class="inline-code">  Window's drawable (Xlib Drawable), requires Lua extras enabled at compile time.</p>
+                <p class="inline-code"> Window's drawable (Xlib Drawable), requires Lua extras enabled at compile time.
+                </p>
             </section>
-            <section>
+            <section class="sub-wrapper0">
                 <code class="inline-code">visual</code>
-                <p class="inline-code">  Window's visual (Xlib Visual), requires Lua extras enabled at compile time.</p>
+                <p class="inline-code"> Window's visual (Xlib Visual), requires Lua extras enabled at compile time.</p>
             </section>
-            <section>
-                <code class="inline-code">display</code>
-                <p class="inline-code">  Window's display (Xlib Display), requires Lua extras enabled at compile time.</p>
+            <section class="sub-wrapper0"><code class="inline-code">display</code>
+                <p class="inline-code"> Window's display (Xlib Display), requires Lua extras enabled at compile time.
+                </p>
             </section>
-            <section>
-                <code class="inline-code">width</code>
-                <p class="inline-code">  Window width (in pixels).</p>
+            <section class="sub-wrapper0"><code class="inline-code">width</code>
+                <p class="inline-code"> Window width (in pixels).</p>
             </section>
-            <section>
-                <code class="inline-code">height</code>
-                <p class="inline-code">  Window height (in pixels).</p>
+            <section class="sub-wrapper0"><code class="inline-code">height</code>
+                <p class="inline-code"> Window height (in pixels).</p>
             </section>
-            <section>
-                <code class="inline-code">border_inner_margin</code>
-                <p class="inline-code">  Window's inner border margin (in pixels).</p>
+            <section class="sub-wrapper0"><code class="inline-code">border_inner_margin</code>
+                <p class="inline-code"> Window's inner border margin (in pixels).</p>
             </section>
-            <section>
-                <code class="inline-code">border_outer_margin</code>
-                <p class="inline-code">  Window's outer border margin (in pixels).</p>
+            <section class="sub-wrapper0"> <code class="inline-code">border_outer_margin</code>
+                <p class="inline-code"> Window's outer border margin (in pixels).</p>
             </section>
-            <section>
-                <code class="inline-code">border_width</code>
-                <p class="inline-code">  Window's border width (in pixels).</p>
+            <section class="sub-wrapper0"> <code class="inline-code">border_width</code>
+                <p class="inline-code"> Window's border width (in pixels).</p>
             </section>
-            <section>
-                <code class="inline-code">text_start_x</code>
-                <p class="inline-code">  The x component of the starting coordinate of text drawing.</p>
+            <section class="sub-wrapper0"><code class="inline-code">text_start_x</code>
+                <p class="inline-code"> The x component of the starting coordinate of text drawing.</p>
             </section>
-            <section>
-                <code class="inline-code">text_start_y</code>
-                <p class="inline-code">  The y component of the starting coordinate of text drawing.</p>
+            <section class="sub-wrapper0"> <code class="inline-code">text_start_y</code>
+                <p class="inline-code"> The y component of the starting coordinate of text drawing.</p>
             </section>
-            <section>
-                <code class="inline-code">text_width</code>
-                <p class="inline-code">  The width of the text drawing region.</p>
+            <section class="sub-wrapper0"> <code class="inline-code">text_width</code>
+                <p class="inline-code"> The width of the text drawing region.</p>
             </section>
-            <section>
-                <code class="inline-code">text_height</code>
-                <p class="inline-code">  The height of the text drawing region.</p>
+            <section class="sub-wrapper0"> <code class="inline-code">text_height</code>
+                <p class="inline-code"> The height of the text drawing region.</p>
+                <p>NOTE: This table is only defined when X support is enabled.</p>
             </section>
-            <p>NOTE: This table is only defined when X support is enabled.</p>
             <section class="sub-wrapper0">
                 <code> conky_info table</code>
-                <p>This table contains some information about Conky's internal data. The following table describes the values contained:</p>
+                <p>This table contains some information about Conky's internal data. The following table describes the
+                    values contained:</p>
                 <code class="inline-code">update_interval</code>
-                <p class="inline-code">   Conky's update interval (in seconds).</p>
+                <p class="inline-code"> Conky's update interval (in seconds).</p>
                 <code class="inline-code">uptime</code>
-                <p class="inline-code">   System uptime, in seconds.</p>
+                <p class="inline-code"> System uptime, in seconds.</p>
             </section>
             <section class="sub-wrapper0">
                 <code> conky_build_info string </code>
-                <p>A string containing the build info for this particular instance of Conky, including the version, build date, and architecture.</p>
+                <p>A string containing the build info for this particular instance of Conky, including the version,
+                    build date, and architecture.</p>
             </section>
             <section class="sub-wrapper0">
                 <code> conky_build_date string</code>
@@ -2612,25 +2660,31 @@
             </section>
             <section class="sub-wrapper0">
                 <code> conky_version string</code>
-                <p>    A string containing the version of the current instance of Conky.</p>
+                <p> A string containing the version of the current instance of Conky.</p>
             </section>
             <section class="sub-wrapper0">
                 <code> conky_config string </code>
-                <p>    A string containing the path of the current Conky configuration file.</p>
+                <p> A string containing the path of the current Conky configuration file.</p>
             </section>
             <section class="sub-wrapper0">
                 <code> cairo_text_extents_t:create() function </code>
-                <p>     Call this function to return a new cairo_text_extents_t structure. A creation function for this structure is not provided by the cairo API. After calling this, you should use tolua.takeownership() on the return value to ensure ownership is passed properly. </p>
+                <p> Call this function to return a new cairo_text_extents_t structure. A creation function for this
+                    structure is not provided by the cairo API. After calling this, you should use tolua.takeownership()
+                    on the return value to ensure ownership is passed properly. </p>
             </section>
             <section class="sub-wrapper0">
                 <code> cairo_font_extents_t:create() function </code>
-                <p>     Call this function to return a new cairo_font_extents_t structure. A creation function for this structure is not provided by the cairo API. After calling this, you should use tolua.takeownership() on the return value to ensure ownership is passed properly. </p>
+                <p> Call this function to return a new cairo_font_extents_t structure. A creation function for this
+                    structure is not provided by the cairo API. After calling this, you should use tolua.takeownership()
+                    on the return value to ensure ownership is passed properly. </p>
             </section>
             <section class="sub-wrapper0">
                 <code> cairo_matrix_t:create() function </code>
-                <p>     Call this function to return a new cairo_matrix_t structure. A creation function for this structure is not provided by the cairo API. After calling this, you should use tolua.takeownership() on the return value to ensure ownership is passed properly. </p>
+                <p> Call this function to return a new cairo_matrix_t structure. A creation function for this structure
+                    is not provided by the cairo API. After calling this, you should use tolua.takeownership() on the
+                    return value to ensure ownership is passed properly. </p>
             </section>
-            <section class="main-section">
+            <section class="section-wrapper">
                 <h3 id="Examples">Examples</h3>
             </section>
             <section class="sub-wrapper0">
@@ -2643,39 +2697,57 @@
             </section>
             <section class="sub-wrapper0">
                 <code>conky -C > ~/.conkyrc</code>
-                <p>Do not start Conky, but have it output the builtin default config file to ~/.conkyrc for later customising.</p>
+                <p>Do not start Conky, but have it output the builtin default config file to ~/.conkyrc for later
+                    customising.</p>
             </section>
-            <section class="main-section">
+            <section class="section-wrapper">
                 <h3 id="Files">Files</h3>
             </section>
             <section class="sub-wrapper0">
                 <code> ${sysconfdir}/conky/conky.conf </code>
-                <p>    Default system-wide configuration file. The value of ${sysconfdir} depends on the compile-time options (most likely /etc).</p>
+                <p> Default system-wide configuration file. The value of ${sysconfdir} depends on the compile-time
+                    options (most likely /etc).</p>
             </section>
             <section class="sub-wrapper0">
                 <code> ~/.conkyrc </code>
-                <p>    Default personal configuration file.</p>
+                <p> Default personal configuration file.</p>
             </section>
-            <section class="main-section">
+            <section class="section-wrapper">
                 <h3 id="Bugs">Bugs</h3>
-                <p>Drawing to root or some other desktop window directly doesn't work with all window managers. Especially doesn't work well with Gnome and it has been reported that it doesn't work with KDE either. Nautilus can be disabled from drawing to desktop with program gconf-editor. Uncheck show_desktop in /apps/nautilus/preferences/. There is -w switch in Conky to set some specific window id. You might find xwininfo -tree useful to find the window to draw to. You can also use -o argument which makes Conky to create its own window. If you do try running Conky in its own window, be sure to read up on the own_window_type settings and experiment.</p>
+                <p>Drawing to root or some other desktop window directly doesn't work with all window managers.
+                    Especially doesn't work well with Gnome and it has been reported that it doesn't work with KDE
+                    either. Nautilus can be disabled from drawing to desktop with program gconf-editor. Uncheck
+                    show_desktop in /apps/nautilus/preferences/. There is -w switch in Conky to set some specific window
+                    id. You might find xwininfo -tree useful to find the window to draw to. You can also use -o argument
+                    which makes Conky to create its own window. If you do try running Conky in its own window, be sure
+                    to read up on the own_window_type settings and experiment.</p>
             </section>
-            <section class="main-section">
+            <section class="section-wrapper">
                 <h3 id="See_Also">See Also</h3>
                 <a href="http://conky.sourceforge.net/">http://conky.sourceforge.net/</a>
                 <a href=" http://www.sourceforge.net/projects/conky"> http://www.sourceforge.net/projects/conky</a>
                 <a href="http://wiki.conky.be">http://wiki.conky.be</a>
                 <p>#conky on irc.freenode.net</p>
             </section>
-            <section class="main-section">
+            <section class="section-wrapper">
                 <h3>Copying</h3>
-                <p>Copyright (c) 2005-2010 Brenden Matthews, Philip Kovacs, et. al. Any original torsmo code is licensed under the BSD license (see LICENSE.BSD for a copy). All code written since the fork of torsmo is licensed under the GPL (see LICENSE.GPL for a copy), except where noted differently (such as in portmon code, timed thread code, and audacious code which are LGPL, and prss which is an MIT-style license).</p>
+                <p>Copyright (c) 2005-2010 Brenden Matthews, Philip Kovacs, et. al. Any original torsmo code is licensed
+                    under the BSD license (see LICENSE.BSD for a copy). All code written since the fork of torsmo is
+                    licensed under the GPL (see LICENSE.GPL for a copy), except where noted differently (such as in
+                    portmon code, timed thread code, and audacious code which are LGPL, and prss which is an MIT-style
+                    license).</p>
             </section>
-            <section class="main-section">
+            <section class="section-wrapper">
                 <h3>Authors</h3>
                 <p>The Conky dev team (see AUTHORS for a full list of contributors).</p>
             </section>
         </section>
+        <div id="img-container">
+            <a href="#">
+                <div id="up_arrow">
+                </div>
+            </a>
+        </div>
     </main>
 </body>
 
