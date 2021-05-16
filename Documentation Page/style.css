@@ -4,14 +4,14 @@
 
 @font-face {
     font-family: "font1";
-    src: url(/Fonts/Roboto-Regular.ttf);
-    src: url(/Fonts/Ubuntu-Regular.ttf);
+    src: url(./Fonts/Roboto-Regular.ttf);
+    src: url(./Fonts/Ubuntu-Regular.ttf);
 }
 
 @font-face {
     font-family: "font2";
-    src: url(/Fonts/Ubuntu-Regular.ttf);
-    src: url(/Fonts/Roboto-Regular.ttf);
+    src: url(./Fonts/Ubuntu-Regular.ttf);
+    src: url(./Fonts/Roboto-Regular.ttf);
 }
 
 body {
